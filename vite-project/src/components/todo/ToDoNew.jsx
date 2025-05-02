@@ -1,9 +1,12 @@
+import { useState } from "react"
+
 const ToDoNew = () => {
+    const [valueInput, setValueInput] = useState("eric")
     const handleClick = () => {
-        alert("Click me!")
+        console.log(" >>> check valueInput: ", valueInput)
     }
     const handleOnChange = (name) => {
-        console.log(">>> handleOnChange", name) // event.target trở tới input, value giá trị của ô input
+        setValueInput(name) // event.target trở tới input, value giá trị của ô input
     } // Mỗi 1 lần gõ vào là onChange đc kích hoạt
     return (
         <div className="todo-new">
